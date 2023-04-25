@@ -90,11 +90,7 @@
     </table>
     <div class="tableFooter">
         <span class="results">
-            Showing {{
-                (totalResults < pages.resultsPerPage)
-                    ? totalResults
-                    : (pages.resultsPerPage * pages.current <= totalResults ? pages.resultsPerPage * pages.current : totalResults)
-            }} of {{ totalResults }} results
+            Showing {{ rangeMessage }} of {{ totalResults }} results
         </span>
         <div class="pagination">
             <a href="#"
@@ -130,6 +126,7 @@ export default {
     data() {
         return {
             search: "",
+            lastSearch: "",
             searchPrefix: "",
             columnData: [
                 //Example column
@@ -205,8 +202,10 @@ export default {
             }
 
             //reset our pagination if the user searches something
-            if (this.search.length)
+            if (this.search.length && this.search !== this.lastSearch)
                 this.pages.current = 1;
+
+            this.lastSearch = this.search;
 
             //Request our new data and update the table
             this.$axios
@@ -217,6 +216,7 @@ export default {
                     searchPrefix: this.searchPrefix,
                     redirectFilter: window.tableSearch
                 }).then((response) => {
+
                     this.rowData = response.data.data.data;
                     this.pages.total = Math.ceil(response.data.data.filters.pages.total);
                     this.totalResults = response.data.data.filters.totalResults;
@@ -252,6 +252,13 @@ export default {
         },
         sendToUrl(url) {
             window.open(url, '_blank');
+        }
+    },
+    computed: {
+        rangeMessage() {
+            let start = (this.pages.current - 1) * this.pages.resultsPerPage + 1;
+            let end = Math.min(this.pages.current * this.pages.resultsPerPage, this.totalResults);
+            return `${start}-${end}`;
         }
     }
 }

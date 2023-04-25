@@ -179,6 +179,10 @@
                     {
                         to: '/patreons',
                         title: 'Supporters',
+                    },
+                    {
+                        to: 'https://github.com/NyxBaird/Submodica',
+                        title: 'GitHub'
                     }
                 ]
             };

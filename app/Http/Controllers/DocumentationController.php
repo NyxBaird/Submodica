@@ -6,6 +6,9 @@ use App\Models\DocumentationFile;
 use Illuminate\Support\Facades\DB;
 
 /**
+ * This was my start at putting together AI generated documentation for subnautica.
+ * Further research indicated this could cost hundreds of dollars at current rates so it's on hold for now.
+ *
  * Class DocumentationController
  * @package App\Http\Controllers
  */
