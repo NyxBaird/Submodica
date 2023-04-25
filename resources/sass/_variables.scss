@@ -1,0 +1,222 @@
+@use 'sass:math';
+
+//Mixins
+@mixin mobile() {
+    //Check if we're on a mobile or small screen
+    @media (pointer:none), (pointer:coarse), screen and ( max-width: 600px ) {
+        @content;
+    }
+}
+
+@font-face {
+    font-family: 'DaysOne-Regular';
+    src: url('/public/fonts/days-one/DaysOne-Regular.ttf');
+}
+
+$headerBG: #222D4C;
+$headerLinkSpacing: 12px;
+
+//This is the corner radius that looks best in our container
+$corners: 18px;
+
+//Generic colors
+$green: #4f8f7c;
+$greenBorder: #32594e;
+
+//Our generic text color
+$textColor: #BFDFFF;
+$bordersColor: #74B9FF;
+$linkColor: #e6e391;//#74B9FF;
+$errorBG: #FF7675;
+$errorFG: #eb4034;
+
+$containerBG: rgb(2, 108, 214, 0.95);
+
+//Some form global styles
+$formOpacity: 0.8;
+$formTextColor: #666;
+$formBordersColor: #74B9FF;
+$formBorderRadius: 5px;
+$formComponentPadding: 3px 5px;
+$wysiwygLinkColor: #74B9FF;
+.formComponent {
+    display: inline-block;
+    padding: 10px;
+
+    input {
+        width: 100%;
+        display: inline-block;
+        border-radius: $formBorderRadius;
+        border: 1px solid $formBordersColor;
+        background-color: rgba(255, 255, 255, $formOpacity);
+        padding: $formComponentPadding;
+    }
+
+    button {
+        width: 20%;
+        cursor: pointer;
+        border-width: 1px;
+        border-radius: 0 $formBorderRadius $formBorderRadius 0;
+        padding: $formComponentPadding;
+    }
+
+    select {
+        width: 100%;
+        border-radius: $formBorderRadius;
+        border: 1px solid $formBordersColor;
+        background-color: rgba(255, 255, 255, $formOpacity);
+        padding: $formComponentPadding;
+    }
+
+    textarea {
+        margin-top: 3px;
+        width: 100%;
+        min-height: 50px;
+        resize: vertical;
+        border-radius: $formBorderRadius;
+        border: 1px solid $formBordersColor;
+        background-color: rgba(255, 255, 255, $formOpacity);
+        padding: $formComponentPadding;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+input[type='radio'], input[type='checkbox'] {
+    cursor: pointer;
+}
+
+//Declare a few global styles here since we include this everywhere
+.btn {
+    cursor: pointer;
+    border: 1px solid $bordersColor;
+    border-radius: 3px;
+    margin: 8px 10px;
+    padding: 4px 16px;
+}
+.btnRed {
+    background-color: $errorBG;
+    color: #FFF;
+    border: 1px solid $errorFG;
+}
+.btnGreen {
+    background-color: $green;
+    color: #FFF;
+    border: 1px solid $greenBorder;
+}
+.btnBlue {
+    background-color: #34598d;
+    color: #FFF;
+    border: 1px solid #2b367a;
+}
+.btnGithub {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.btnDiscord {
+    background-color: #7289da;
+    border-color: #7289da;
+    color: white;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $textColor;
+    margin: 10px 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+.floatLeft {
+    float: left;
+}
+.floatRight {
+    float: right;
+}
+
+.container a {
+    text-decoration: none;
+    color: $linkColor;
+}
+a{
+    cursor: pointer;
+}
+
+.validationError {
+    font-size: 12px;
+    margin-left: 3px;
+    color: darkred;
+}
+
+//Prevents scrolling
+.noscroll {
+    overflow: hidden;
+}
+
+//Col system
+$piece: math.div(100, 12);
+$componentPadding: 10px;
+@for $i from 1 through 12 {
+    $class: ".col" + $i;
+
+    #{$class} {
+        width: calc((($piece * $i) * 1%) - ($componentPadding * 2));
+    }
+
+    @include mobile() {
+        $mobileClass: ".mCol" + $i;
+        #{$mobileClass} {
+            width: calc((($piece * $i) * 1%) - ($componentPadding * 2));
+        }
+
+        .mobileHide {
+            display: none;
+        }
+    }
+}
+
+//v-select
+.vs__actions {
+    display: none;
+}
+.vs__dropdown-menu {
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid $bordersColor;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, $formOpacity);
+    color: black;
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.vs__search {
+    margin-top: 3px;
+}
+
+.vs__selected {
+    $selectedPaddingW: 5px;
+    font-size: 12px;
+    position: relative;
+    display: block;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 2px $selectedPaddingW;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.vs__deselect {
+    float: right;
+    width: auto !important;
+    background-color: rgb(0,0,0,0);
+    margin: -1px -3px;
+    color: #FFF;
+    border: 0;
+}

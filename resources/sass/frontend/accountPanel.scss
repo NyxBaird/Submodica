@@ -1,0 +1,20 @@
+@import "../variables";
+
+.accountDetails {
+    div {
+        padding: 0 10px;
+    }
+}
+
+.accountPanel {
+    text-align: center;
+}
+
+.accountConnect {
+    margin-top: 0;
+}
+
+.circle > img {
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
