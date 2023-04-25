@@ -1,0 +1,304 @@
+@use 'sass:math';
+@import "../../variables";
+
+form {
+    width: 100%;
+
+    table {
+        color: $textColor;
+        width: 100%;
+
+        margin-top: -10px;
+
+        td button {
+            width: 50%;
+        }
+
+        tr td:last-of-type {
+            button {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.bullet {
+    font-size: 12px;
+    margin-bottom: 10px
+}
+
+#images {
+
+    #coverImage {
+        $height: 200px;
+        $borderSize: 2px;
+
+        &, label, canvas {
+            border-radius: 5px;
+        }
+
+        z-index: 9;
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin-left: -$borderSize;
+        border: $borderSize solid $textColor;
+        background-color: $textColor;
+
+        #coverText {
+            position: absolute;
+            display: none;
+            bottom: 0;
+            left: 260px;
+
+            margin: 0 0 15px 15px;
+
+            font-family: "DaysOne-Regular", sans-serif;
+
+            .title {
+                font-size: 40px;
+
+                small {
+                    font-size: 18px;
+                    font-family: "Roboto", sans-serif;
+                }
+            }
+        }
+
+        &.active {
+            #coverText {
+                display: block;
+            }
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #444;
+            opacity: 0.6;
+            text-align: center;
+            vertical-align: middle;
+
+            &:hover {
+                background-color: #999;
+            }
+        }
+
+        #coverVerticalCenter {
+            pointer-events: none;
+            position: relative;
+            font-size: 28px;
+            width: 100%;
+            text-align: center;
+            margin-top: -115px;
+            z-index: 100;
+        }
+
+        &.active label, &.active #coverVerticalCenter {
+            display: none;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    #iconImage {
+        $size: 180px; //dont forget to change canvas size if this is changed
+        $border: 2px;
+
+        z-index: 10;
+        position: relative;
+        height: $size;
+        width: $size;
+        border: 1px solid $textColor;
+        background-color: $textColor;
+        border-radius: math.div($size, 2);
+        margin-top: -130px;
+        margin-left: 50px;
+
+        label {
+            cursor: pointer;
+            display: table-cell;
+            position: relative;
+            top: $border;
+            left: $border;
+            width: $size - ($border * 2);
+            height: $size - ($border * 2);
+            border-radius: math.div($size, 2);
+            background-color: #444;
+            opacity: 0.6;
+            text-align: center;
+            vertical-align: middle;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        canvas {
+            margin-top: $border;
+            margin-left: $border;
+            width: $size - ($border * 2);
+            height: $size - ($border * 2);
+            border-radius: math.div($size, 2);
+            z-index: 50;
+        }
+
+        &.active label {
+            display: none;
+        }
+    }
+
+    div {
+        input[type="file"] {
+            display: none;
+            z-index: 10;
+        }
+
+        canvas {
+            display: none;
+        }
+
+        &.active canvas {
+            display: block;
+        }
+
+        .deleteImage {
+            display: none;
+        }
+
+        &.active > .deleteImage {
+            position: absolute;
+            display: block;
+            right: 0;
+            padding: 5px 7px;
+
+            background-color: $errorBG;
+            border: 1px solid $errorFG;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: darkred;
+                cursor: pointer;
+            }
+        }
+
+        &:first-of-type.active > .deleteImage {
+            top: -15px;
+            right: -15px;
+        }
+        &:nth-of-type(2).active > .deleteImage {
+            top: 5px;
+            right: 5px;
+        }
+    }
+
+    #galleryTitle {
+        font-size: 18px;
+    }
+}
+
+.imageGroup.misc {
+    background-color: $textColor;
+    border: 1px solid $textColor;
+    margin-top: 15px;
+    z-index: 9;
+    width: 100%;
+    position: relative;
+
+    &, label, canvas {
+        border-radius: 5px;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    label {
+        display: block;
+        position: relative;
+        background-color: #444;
+        height: 50px;
+        width: 100%;
+        opacity: 0.6;
+        text-align: center;
+        z-index: 90;
+        margin-bottom: 1px;
+        margin-right: -1px;
+
+        &:hover {
+            cursor: pointer;
+            &:hover {
+                background-color: #999;
+            }
+        }
+    }
+
+    .galleryVerticalCenter {
+        pointer-events: none;
+        position: relative;
+        font-size: 26px;
+        width: 100%;
+        text-align: center;
+        margin-top: -40px;
+        margin-bottom: 8px;
+        z-index: 100;
+    }
+
+    .galleryText {
+        display: none;
+    }
+    &.active {
+        position: relative;
+
+        .galleryText {
+            position:relative;
+            display: inline-block;
+            -webkit-text-stroke: 1px black;
+            padding-top: 10px;
+            padding-left: 20px;
+            font-size: 26px;
+            z-index: 11;
+            margin-bottom: -47px;
+        }
+    }
+
+    &.active label, &.active .galleryVerticalCenter {
+        display: none;
+    }
+
+    canvas {
+        width: 100%;
+        height: 52px;
+        z-index: 10;
+    }
+
+    .deleteImage {
+        position: relative;
+        margin-top: -14px;
+        margin-right: -14px;
+        z-index: 12;
+    }
+}
+
+.modal .footer {
+    button {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    button:last-of-type {
+        float: right;
+    }
+}
+
+#altErrors {
+    span {
+        display: block;
+    }
+}
