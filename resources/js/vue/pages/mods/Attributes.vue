@@ -26,6 +26,10 @@ form {
                 border-radius: 5px;
             }
         }
+
+        input {
+            width: calc(100% - 10px) !important;
+        }
     }
 }
 </style>

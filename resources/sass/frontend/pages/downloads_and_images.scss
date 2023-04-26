@@ -254,6 +254,10 @@ form {
     .galleryText {
         display: none;
     }
+    .galleryIcon {
+        position: absolute;
+        top: 0;
+    }
     &.active {
         position: relative;
 
