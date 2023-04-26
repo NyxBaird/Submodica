@@ -20,6 +20,7 @@
             width: 100%;
             font-size: 2px;
             margin-bottom: 2px;
+            color: black;
 
             tr {
                 text-align: center;

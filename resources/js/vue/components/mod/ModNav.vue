@@ -5,6 +5,7 @@
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-bottom: 25px;
 
     z-index: 10;
 
