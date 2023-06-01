@@ -240,7 +240,9 @@ input[type='radio'] {
             <div id="coverText">
                 <div class="title" v-if="mod.show_cover_title">{{ mod.title }} <small>by {{ mod.creator }}</small></div>
                 <span class="tinyData">
-                    Maintained By: {{ mod.maintainer }}
+                    <span v-if="mod.id!=246"> <!--temp workaround for nautilus shouldn't show maintainer-->
+                        Maintained By: {{ mod.maintainer }}
+                    </span>
                     <span v-if="mod.latest_version">| Latest: {{ mod.latest_version }}</span>
                 </span>
             </div>
