@@ -241,7 +241,7 @@ input[type='radio'] {
                 <div class="title" v-if="mod.show_cover_title">{{ mod.title }} <small>by {{ mod.creator }}</small></div>
                 <span class="tinyData">
                     <span v-if="showMaintainer"> <!--temp workaround for nautilus shouldn't show maintainer-->
-                        Maintained By: {{ mod.maintainer }}
+                        Maintained By: {{ mod.maintainer }}&nbsp;
                     </span>
                     <span v-if="mod.latest_version">
                         <span v-if="showMaintainer">|</span>
@@ -405,7 +405,7 @@ export default {
                 reason: '',
                 details: ''
             },
-            showMaintainer: (this.$route.params.mod!=246 && this.$route.params.mod!=247)
+            showMaintainer: (this.$route.params.mod!='246' && this.$route.params.mod!='247')
         };
     },
     props: {
