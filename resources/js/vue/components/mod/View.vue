@@ -245,7 +245,8 @@ input[type='radio'] {
                     </span>
                     <span v-if="mod.latest_version">
                         <span v-if="showMaintainer">|</span>
-                        Latest: {{ mod.latest_version }}</span>
+                        Latest: {{ mod.latest_version }}
+                    </span>
                 </span>
             </div>
         </div>
