@@ -240,10 +240,13 @@ input[type='radio'] {
             <div id="coverText">
                 <div class="title" v-if="mod.show_cover_title">{{ mod.title }} <small>by {{ mod.creator }}</small></div>
                 <span class="tinyData">
-                    <span v-if="mod.id!=246"> <!--temp workaround for nautilus shouldn't show maintainer-->
+                    <span v-if="showMaintainer"> <!--temp workaround for nautilus shouldn't show maintainer-->
                         Maintained By: {{ mod.maintainer }}
                     </span>
-                    <span v-if="mod.latest_version">| Latest: {{ mod.latest_version }}</span>
+                    <span v-if="mod.latest_version">
+                        <span v-if="showMaintainer">|</span>
+                        Latest: {{ mod.latest_version }}
+                    </span>
                 </span>
             </div>
         </div>
@@ -401,7 +404,8 @@ export default {
             report: {
                 reason: '',
                 details: ''
-            }
+            },
+            showMaintainer: (mod.id!=246 && mod.id!=247)
         };
     },
     props: {
