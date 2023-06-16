@@ -405,7 +405,7 @@ export default {
                 reason: '',
                 details: ''
             },
-            showMaintainer: (this.$route.params.mod!='246' && this.$route.params.mod!='247')
+            showMaintainer: (this.$route.params.mod!='250' && this.$route.params.mod!='251')
         };
     },
     props: {

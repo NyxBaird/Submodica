@@ -127,11 +127,11 @@ h2 {
         <div v-if="searchPrefix === 'legacy' || $route.params.game === 'sbz'" id="coreMods">
             <a class="btn btnBlue" :href="$route.params.game==='sn1' ? '/mods/sn1/86' : '/mods/sbz/88'" target="_blank">QMod Manager</a>
             <a class="btn btnBlue" :href="$route.params.game==='sn1' ? '/mods/sn1/87' : '/mods/sbz/89'" target="_blank">SML Helper</a>
-            <a v-if="$route.params.game==='sbz'" class="btn btnBlue" href="/mods/sbz/247" target="_blank">Nautilus API</a>
+            <a v-if="$route.params.game==='sbz'" class="btn btnBlue" href="/mods/sbz/251" target="_blank">Nautilus API</a>
         </div>
         <div v-else id="coreMods" class="twoPointOh">
             <a class="btn btnBlue" href="/mods/sn1/141" target="_blank">BepInEx Subnautica Pack</a>
-            <a class="btn btnBlue" href="/mods/sn1/246" target="_blank">Nautilus API</a>
+            <a class="btn btnBlue" href="/mods/sn1/250" target="_blank">Nautilus API</a>
         </div>
         <br />
     </div>
