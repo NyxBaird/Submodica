@@ -284,12 +284,16 @@
                 return "The Version field is required";
         }
 
-        if (/^(((\d+)\.?){0,3}\d+)$/.test(version)) {
+        const originalRegex = /^(((\d+)\.?){0,3}\d+)$/;
+        const semverRegex = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?$/;
+
+        if (originalRegex.test(version) || semverRegex.test(version)) {
             return true;
         } else {
             return "Invalid Version Format";
         }
     });
+
 
     //This is verified on the server end too
     defineRule('downloadUrl', (value, [repo]) => {
