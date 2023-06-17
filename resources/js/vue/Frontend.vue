@@ -48,7 +48,7 @@
                 Note: We comply with EU user consent policy, California Consumer Privacy Act (CCPA), and other relevant regulations. <br />
                 <br />
 
-                By clicking "I consent," you agree to the use of these cookies. Learn more about our cookies and how they're used: <br />
+                By clicking "I consent," you agree to the use of these cookies. Learn more about our cookies and how they're used in our <a href="/privacy-policy">Privacy Policy</a> <br />
                 <br />
                 <br />
 
