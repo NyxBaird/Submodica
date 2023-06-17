@@ -57,9 +57,13 @@
 
         <p>The materials appearing on Submodica’s Website may include technical, typographical, or photographic errors. Submodica will not promise that any of the materials in this Website are accurate, complete, or current. Submodica reserves the right to change the materials contained on its Website at any time without notice. Submodica does not make any commitment to update the materials.</p>
 
-        <h2>7. Links</h2>
+        <h2>7. Links to Other Websites</h2>
 
-        <p>Submodica has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by Submodica of the site. The use of any linked website is at the user’s own risk.</p>
+        <p>Submodica's Website may contain links to third-party websites or services that are not owned, controlled, or operated by Submodica. These links are provided for your convenience and reference only. Submodica does not endorse, approve, warrant, or assume any responsibility for the content, accuracy, appropriateness, security, or privacy policies and practices of these linked websites or services. Your access to and use of any third-party websites or services is entirely at your own risk, and it is your responsibility to evaluate the risks and consequences of accessing and utilizing any third-party websites or services.</p>
+
+        <p>Please be aware that the terms and conditions and privacy policies of these third-party websites may differ from Submodica's own policies. Submodica strongly encourages users to review the terms, conditions, and privacy policies of any third-party websites or services before engaging in any activity on those platforms.</p>
+
+        <p>By using Submodica's Website, you agree that Submodica will not be held liable or responsible, directly or indirectly, for any damage, loss, or liability caused or alleged to be caused by or in connection with the use of or reliance on any content, goods, or services available on or through any third-party websites or services.</p>
 
         <h2>8. Site Terms of Use Modifications</h2>
 
