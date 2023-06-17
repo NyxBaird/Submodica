@@ -56,7 +56,7 @@
             <a @click="this.$refs.contactModal.open()">Contact</a>
         </div>
         <div id="submodicaAttributions">
-            Submodica was built and is maintained by <a @click="this.$refs.contactModal.open()">NyxB</a> as a non-profit side project. The background art for Submodica was drawn by <a href="https://www.instagram.com/ghosty_leaf/" target="_blank">GhostyLeaf</a>. All mods on Submodica belong to and are maintained by their respective authors.<br />
+            Submodica was built and is maintained by <a @click="this.$refs.contactModal.open()">NyxB</a> as a side project. The background art for Submodica was drawn by <a href="https://www.instagram.com/ghosty_leaf/" target="_blank">GhostyLeaf</a>. All mods on Submodica belong to and are maintained by their respective authors.<br />
             Subnautica and Subnautica: Below Zero are trademarks of Unknown Worlds Entertainment and are not affiliated with Submodica.
         </div>
     </div>
