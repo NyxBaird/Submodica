@@ -30,8 +30,8 @@
             </div>
         </Modal>
 
-        <Modal ref="CookiesModal" :prevent-manual-close=true height="135px">
-            <div id="cookieAgreement">
+        <Modal ref="consentModal" :prevent-manual-close=true height="135px">
+            <div id="agreement">
                 Submodica (along with basically every other website out there) uses a few basic cookies for both security and ease of use.<br />
                 <br />
                 If you choose to proceed the following cookies may be saved on your device;<br />
@@ -40,10 +40,18 @@
                     &nbsp;*&nbsp;An XSRF token (used to verify that you're not a malicious actor)<br />
                     &nbsp;*&nbsp;A session token (used to verify essential data like your logged in user)<br />
                     &nbsp;*&nbsp;A login redirect url (used to send you back to the page you were on after you log in)<br />
+                    &nbsp;*&nbsp;Google Adsense cookies to allow for personal recommendations (where applicable- see our privacy policy for details)<br />
                 </span>
                 <br />
                 This is all pretty standard stuff. If more are added in the future this list will be updated and you will be asked to re-verify your consent.<br />
                 <br />
+                Note: We comply with EU user consent policy, California Consumer Privacy Act (CCPA), and other relevant regulations. <br />
+                <br />
+
+                By clicking "I consent," you agree to the use of these cookies. Learn more about our cookies and how they're used: <br />
+                <br />
+                <br />
+
                 <button class="btn btnGreen col12" @click="consentToCookies">I consent to Submodica storing the cookies outlined above on my device</button>
             </div>
         </Modal>
@@ -92,7 +100,7 @@
             },
             consentToCookies() {
                 this.cookies.set("cookie_agreement", latestConsent, "1y");
-                this.$refs.CookiesModal.close(true);
+                this.$refs.consentModal.close(true);
             }
         },
         setup() {
@@ -101,7 +109,7 @@
         },
         mounted() {
             if (this.cookies.get("cookie_agreement") !== latestConsent)
-                this.$refs.CookiesModal.open();
+                this.$refs.consentModal.open();
 
             if (this.cookies.get("login_redirect")) {
                 let redirect = this.cookies.get("login_redirect");

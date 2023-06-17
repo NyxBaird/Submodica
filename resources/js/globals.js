@@ -1,4 +1,4 @@
-export let latestConsent = "20230302013600"
+export let latestConsent = "20230617011200";
 
 export let roles = {
     member: 10,
