@@ -46,7 +46,7 @@
 
         <h2>Google DoubleClick DART Cookie</h2>
 
-        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to https://submodica.xyz, https://submodica.net, https://submodica.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
 
 
         <h2>Advertising Partners Privacy Policies</h2>
@@ -56,6 +56,8 @@
         <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Submodica, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
 
         <p>Note that Submodica has no access to or control over these cookies that are used by third-party advertisers.</p>
+
+        <p>For Google AdSense, you can read their privacy policy at: <a href="https://support.google.com/adsense/answer/48182?hl=en">https://support.google.com/adsense/answer/48182?hl=en</a></p>
 
         <h2>Third Party Privacy Policies</h2>
 

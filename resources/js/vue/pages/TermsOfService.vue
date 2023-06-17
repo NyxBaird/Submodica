@@ -25,7 +25,7 @@
             <li>use the materials for any commercial purpose or for any public display;</li>
             <li>attempt to reverse engineer any software contained on Submodica's Website;</li>
             <li>remove any copyright or other proprietary notations from the materials; or</li>
-            <li>transferring the materials to another person or "mirror" the materials on any other server.</li>
+            <li>transfer the materials to another person or "mirror" the materials on any other server without Submodica or the mod authors explicit permission.</li>
         </ul>
 
         <p>This will let Submodica terminate your account upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether they are printed or in electronic format.</p>
@@ -36,7 +36,7 @@
 
         <p>You understand and agree that we will not be liable to you or any third party for any loss of profits, use, goodwill, or data, or for any incidental, indirect, special, consequential or exemplary damages, however they arise.</p>
 
-        <p>Submodica will do its best to moderate user content to ensure that it complies with both the terms of service and <a href="/rules">Submodica site rules</a>, but Submodica is in no way responsible for content posted by users.</p>
+        <p>Submodica will make reasonable efforts to moderate user content to ensure that it complies with both the terms of service and <a href="/rules">Submodica site rules</a>, but Submodica is in no way responsible for content posted by users.</p>
 
         <p>You are responsible for your use of the service. If you harm someone else or get into a dispute with someone else, we will not be involved.</p>
 
@@ -55,7 +55,7 @@
 
         <h2>6. Revisions and Errata</h2>
 
-        <p>The materials appearing on Submodica’s Website may include technical, typographical, or photographic errors. Submodica will not promise that any of the materials in this Website are accurate, complete, or current. Submodica may change the materials contained on its Website at any time without notice. Submodica does not make any commitment to update the materials.</p>
+        <p>The materials appearing on Submodica’s Website may include technical, typographical, or photographic errors. Submodica will not promise that any of the materials in this Website are accurate, complete, or current. Submodica reserves the right to change the materials contained on its Website at any time without notice. Submodica does not make any commitment to update the materials.</p>
 
         <h2>7. Links</h2>
 
@@ -63,7 +63,7 @@
 
         <h2>8. Site Terms of Use Modifications</h2>
 
-        <p>Submodica may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.</p>
+        <p>Submodica may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use. It is your responsibility to regularly review these Terms of Use for any updates or changes.</p>
 
         <h2>9. Your Privacy</h2>
 
